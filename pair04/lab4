@@ -1,0 +1,64 @@
+#1
+# grades = [12,3,4,14,-12,5,10,16,-4]
+# d = []
+# v = []
+# p = []
+# k = []
+# for grade in grades:
+#     if grade > 0 :
+#         d.append(grade)
+#     if grade < 0 :
+#          v.append(grade)
+#
+#     if grade % 2 ==0:
+#          p.append(grade)
+#
+#     if grade % 3 == 0:
+#          k.append(grade)
+#
+# print('Додатнє:', d)
+# print('Відємні:',v)
+# print('Парні:', p)
+# print('Кратні 3:', k)
+# print('Min:',min(grades),'Max:',max(grades),'Sum:',sum(grades),'Average:',sum(grades)/len(grades))
+#2
+# group1 = {'Anna','Ivan','Olha'}
+# group2 = {'Ivan','Olha','Maksym'}
+# sp = group1 & group2
+# g1 = group1 - group2
+# g2 = group2 - group1
+# all = group1 | group2
+# print('Спільні:',',' .join(sp))
+# print('Тільки group 1:',','.join(g1))
+# print('Тільки group 2:',','.join(g2))
+# print('Усі:',','.join(all))
+#3
+# prices = {'bread':35,'milk':48,'cheese':120}
+# prices['tea']= 75
+# prices['milk']= 45
+# products = input('Введіть товар:')
+# price = prices.get(products)
+# print(products,'-', price, 'грн')
+#
+# for product,  price in prices.items():
+#     if price > 40 and price <= 100:
+#         print(product, '-', price, 'грн')
+#4
+# group_info = ('10-IT','2026-2027')
+# student = {
+#     'Anna':[10,11,12,9,10]}
+# student['Ivan'] = [8,9,10,11,9]
+# best_name = ''
+# best_average = 0
+# print(group_info[0], '-', group_info[1])
+# for name, grades in student.items():
+#     averega = sum(grades) / len(grades)
+#     print(name,'-', averega)
+#     if averega > best_average:
+#         best_average = averega
+#         best_name = name
+#     # if student[averega][0] > student[averega][1]:#це фігня
+#     #     print('Anna,Ivan')
+#     # else:
+#     #     print('Ivan,Anna')
+# print('Найкращий:',best_name, '-', best_average)
