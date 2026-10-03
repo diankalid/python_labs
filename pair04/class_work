@@ -1,0 +1,149 @@
+# #list - список - впорядкована змінна колкекція
+# grades = [10,8,9]
+# numbers = []
+# numbers_new = list()
+#
+# grades[1] = 12
+# print(grades)
+#
+# numbers.append(10)
+# numbers.append([11,4])
+# numbers.insert(1,[5,6,])#додати 1
+# numbers.extend([7,8,9,7,8,5,8])#додає по декілька елементів
+# numbers.remove(7)#значення
+# numbers.pop(1)#видалити індекс
+# #del numbers[1]
+# #numbers.clear() - очищення
+# print(numbers.count(8))
+# print(numbers.index(8))
+#
+# print(8 in numbers)
+# if 8 in numbers:
+#     print('True')
+# # len()
+# # min()
+# # max()
+# # sum()
+# print(min('a','b'))
+# print(numbers)
+
+
+# numbers = [1,4,6,8,3]
+# numbers.sort(reverse=True)#навпаки
+# print(numbers)
+#
+# new_numbers = sorted(numbers)
+# new_numbers.reverse()
+# print(new_numbers)
+# for number in numbers:
+#     print(number)
+
+# numbers = [1,-9,0,-4,5,-7,42,6]
+# positive = []
+# for number in numbers:
+#     if number > 0:
+#         positive.append(number)
+# print(positive)
+
+
+
+
+
+#tuple - кортежі впорядкована незмінна колекція
+# point = (-10,12)
+# rgb = (255,0,0)
+# data = ()
+# student = 'diana','ddd'
+# print(student)
+# a = (10,)
+# point = point + (30,)
+# print(point)
+# # print(point + a)
+# point = point[:1] + point[2:]
+# print(point)
+# point = (-12,6)
+# x,y = point
+# print(x)
+# print(y)
+
+
+# #set - множина
+#не має дублікатів,індексового достопу,на порядок елементів в множині не звертаємо уваги
+# subjects = {"Python", "HTML", "Java","CSS"}
+# data = {}
+# print(type(data))
+# subjects.add('C++')
+# subjects.update(['Java','Python'])
+# print(subjects)
+# subjects.remove('Java')
+# subjects.discard('C#')
+# print(subjects)
+# if "Python" in subjects:
+#     print("Python")
+
+# name = ["Ivan", "Oleg", "Olha", "Ivan","Maria","Maria"]
+# unique_name = set(name)
+# print(unique_name)
+
+
+# group1 = {"Ivan", "Oleg", "Olha"}
+# group2 = {"Ivan","Maria","Anna"}
+# group3 = group1 & group2#перетин спільне
+# group4 = group1 | group2#унікаль
+# group5 = group1 -  group2#1 є в 2 нема
+#
+# print(group3)
+# print(group4)
+# print(group5)
+#
+#
+#
+# #dict - словники
+# student = {
+#     "name": "diana",
+#      "grade": 12 }
+# student2 ={}
+# student3 = dict()
+# print(student["name"])
+# student["age"] = 15
+# print(student)
+# student["age"] = 16
+# print(student)
+# student_update = student.pop("age")
+# print(student_update)
+
+#
+# student = {
+#     "name": "diana",
+#      "grade": 12 }
+# print(student.get("age,", "Такого нема"))
+# if "grade" in student:
+#     print(student.get("grade"))
+#
+# if "diana" in student.values():
+#     print(student.get("name"))
+# if "diana" in student.keys():
+#     print(student.get("name"))
+#
+# print(students.item())
+#
+#
+# for key, value in student.items():
+#     print(key)
+#     print(value)
+
+
+
+# price = {'apple': 45,
+#          'banana': 70,
+#          'orange': 100,
+#          'kivi': 70,
+#          'mango':150}
+# # print('Усі товари')
+# # for name, price in price.items():
+# #     print(f'{name}: {price}грн')
+# #
+# # print('від 50 до 100 грн')
+# for name, price in price.items():
+#     if price > 50 and price <= 100:
+#         print(f'{name}: {price}грн')
