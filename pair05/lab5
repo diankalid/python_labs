@@ -1,0 +1,154 @@
+# #1
+# def circle_area(radius):
+#     pi = 3.14159
+#     return pi * radius**2
+#
+# def rectangle_area(width, height):
+#     return width * height
+# def triagle_area(base, height):
+#     return 0.5 * base * height
+# def main():
+#     figure = input("Фігура:").lower()
+#
+#
+#     if figure == 'коло':
+#         radius = float(input('Радіус:'))
+#         s3 = circle_area(radius)
+#         print(f'Площа кола: {s3}')
+#     elif figure == 'прямокутник':
+#         width = float(input('Введіть широту прямокутника'))
+#         height = float(input('Введіть висоту прямокутника'))
+#         s = rectangle_area(width, height)
+#         print(f'Площа прямокутника: {s}')
+#     elif figure == 'трикутник':
+#         base = float(input('Введіть основу трикутника'))
+#         height = float(input('Введіть висоту трикутника'))
+#         s2 = triagle_area(base, height)
+#         print(f'Площа прямокутника: {s2}')
+#
+#     else:
+#         print('Помилка')
+#
+# main()
+
+
+# 2
+#
+# def is_prime(n):
+#     if n < 2:
+#         return False
+#     for i in range(2, n - 1):
+#         if n % i == 0:
+#             return False
+#     return True
+# def divisors(n):
+#     dil = []
+#     for i in range(1, n + 1):
+#         if n % i == 0:
+#             dil.append(i)
+#     return dil
+#
+#
+# def digit_sum(n):
+#     total = 0
+#     while n > 0:
+#         total += n % 10
+#         n //= 10
+#     return total
+#
+#
+# def main():
+#     n = int(input('Введіть число'))
+#     if is_prime(n):
+#         print('Просте: Так')
+#     else:
+#         print('Просте: Ні')
+#     print(f'Дільники:, {divisors(n)}')
+#     print(f'Сума:{digit_sum(n)}')
+#
+#
+# main()
+
+
+#3
+
+# def average(grades):
+#     ser = sum(grades)/len(grades)
+#     return ser
+# def minimum(grades):
+#     return min(grades)
+# def maximum(grades):
+#     return max(grades)
+# def count_about(grades,value):
+#     count = 0
+#     for i in grades:
+#         if i > value:
+#             count += 1
+#     return count
+#
+#
+# def main():
+#     grades = [10,8,12,9,11]
+#     p = 9
+#     print(f'Оцінки:{grades}')
+#     print(f'Поріг:{p}')
+#     print(f'Середній бал:{average(grades)}')
+#     print(f'Мінімальна:{minimum(grades)}')
+#     print(f'Максимальна:{maximum(grades)}')
+#     print(f'Вище {p}:{count_about(grades,p)}')
+#
+# main()
+
+
+#4
+# def min_lehght(password):
+#     min_len = 8
+#     return len(password) >= min_len
+# def digit(password):
+#     for i in password:
+#         if i.isdigit():
+#             return True
+#     return False
+# def upper(password):
+#     for i in password:
+#         if i.isupper():
+#             return True
+#     return False
+# def lower(password):
+#     for i in password:
+#         if i.islower():
+#             return True
+#     return False
+# 
+# def special(password):
+#     if digit(password) or upper(password) or lower(password):
+#         return True
+#     return False
+# def validate_password(password):
+#     validate = True
+#     if not min_lehght(password):
+#         print("Довжина менше за 8 символів")
+#         validate = False
+#     if not digit(password):
+#         print("немає цифри")
+#         validate = False
+#     if not upper(password):
+#         print("немає великої букви")
+#         validate = False
+#     if not lower(password):
+#         print("немає малої букви")
+#         validate = False
+#     if not special(password):
+#         print("немає спеціального символу")
+#         validate = False
+#     return validate
+# def main():
+#     password = input("Введіть пароль: ")
+#     if validate_password(password):
+#         print('Пароль відповідає вимогам')
+#     else:
+#         print('Пароль не відповідає вимогам')
+# 
+# 
+# main()
+
