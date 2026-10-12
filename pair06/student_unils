@@ -1,0 +1,17 @@
+import random
+# def generate_grade(count):
+#     grades = []
+#     for i in range(count):
+#         grades.append(random.randint(1,12))
+#     return grades
+# def average_grade(grades):
+#     return sum(grades)/len(grades)
+# def get_leves(average):
+#     if average >= 10:
+#         return 'високий'
+#     elif average >= 7 :
+#         return 'достатній'
+#     elif average >= 4:
+#         return 'середній'
+#     else:
+#         return 'початковий'
