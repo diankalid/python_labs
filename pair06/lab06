@@ -1,0 +1,62 @@
+#1
+# from math import pi
+# from  math import sqrt
+# from math import ceil
+# radius = float(input('Радіус: '))
+# katet1= float(input('Катет1 :'))
+# katet2= float(input('Катет2 :'))
+# pr = float(input('Предметів:'))
+# pack = int(input('упаковок:'))
+# pl = round(pi*radius**2,2)
+# print(f'Площа круга:{pl}')
+# hip = round(sqrt(katet1**2+katet2**2),2)
+# print(f'Гіпотенуза:{hip}')
+# need = ceil(pr/pack)
+# print(f'Потрібно упаковок:{need}')
+#2
+# import random
+# import statistics
+# n = int(input('Оцінки: '))
+# if n <= 0 :
+#     print('Потрібно додатнє число')
+# grades = []
+# for i in range(n):
+#     grades.append(random.randint(1,12))
+# print(f'Оцінки: {grades}')
+# print(f'Min: {min(grades)}')
+# print(f'Max: {max(grades)}')
+# print(f'Середнє: {statistics.mean(grades)}')
+# print(f'Медіана: {statistics.median(grades)}')
+# ot = 0
+# for grade in grades:
+#     if grade >= 10:
+#         ot += 1
+# print(f'Оцінок 10-12:, {ot}')
+#3
+# from datetime import date
+# year = int(input('Enter a year: '))
+# month = int(input('Enter a month: '))
+# day = int(input('Enter a day: '))
+# s = date(year, month, day)
+# today = date.today()
+# if today > s:
+#     rem = today - s
+#     print(f'До події залишилося: {rem.days} днів ')
+# elif today < s:
+#     rem = s - today
+#     print(f'До події залишилося: {rem.days} днів')
+# else:
+#     print('Це сьогодні')
+#4
+# import tkinter as tk
+# import student_unils
+# students = ['Anna','Ivan','Olha']
+# gr = 5
+# for student in students:
+#     grades = student_unils.generate_grade(count)
+#     average = student_unils.average_grade(grades)
+#     level = student_unils.get_leves(average)
+# window = tk.Tk()
+# window.title('Статистика учнів')
+# window.geometry('400x300')
+# button =  Button(window, text = 'Сформувати звіту', command = text)
