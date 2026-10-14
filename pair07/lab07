@@ -1,0 +1,54 @@
+#1
+# with open('text.txt', 'r', encoding = 'utf-8') as file:
+#     text = file.read()
+#
+# lines = text.splitlines('\n')
+# word = text.split('\n')
+# symvol = len(text)
+#
+# if len(lines) > longest:
+#     longest = len(line)
+#     longest_n = number
+#     longest_t = line
+# print('рядків:', len(lines))
+# print('слів:', len(word))
+# print('символів:', symvol)
+# print(f'найдовший рядок: №{longest_n},{longest} символів')
+
+#2
+# fr = input('Введіть якись фрагмент тексту:').lower()
+# with open('text.txt', 'r', encoding = 'utf-8') as file:
+#     lines = file.readlines()
+# found = False
+# for number, line in enumerate(lines, start = 1):
+#     if fr in line.lower():
+#         print(f'{number}: {line}')
+#         found = True
+# if not found:
+#     print('не знайдено')
+#3
+# student = []
+#
+# with open('student.txt', 'r', encoding = 'utf-8') as file:
+#     for line in file:
+#         name, score = line.split(';')
+#         score = int(score)
+#         if score > 80:
+#             student.append((name, score))
+# student.sort(key = lambda student: student[1], reverse = True)
+# with open('result.txt', 'w', encoding = 'utf-8') as file:
+#     for name, score in student:
+#         file.write(f'{name};{score}\n')
+
+#4
+# def read_grade(filename):
+#     gr = []
+#     with open(filename, 'r', encoding='utf-8') as file:
+#         for line in file:
+#           name, grade,subject = line.strip().split(';')
+#           gr.append(int(grade))
+#     return gr
+# def average(grades):
+#     return sum(grades)/len(grades)
+# def write_r(filename, gr):
+#     with open(filename, 'w', encoding='utf-8') as file:
