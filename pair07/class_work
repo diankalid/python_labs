@@ -1,0 +1,110 @@
+import os
+# name = input("Enter your name: ")
+
+#
+# print('створення файлу')
+# with open('hello.txt',"w", encoding = 'utf-8') as file:
+#     file.write('Аня буде вчитися')
+#
+# r - #читання вже існуючого файлу
+# w- #запис,якщо існує файл старе стирається і записується нове
+# a-#додає в кінець старий зміст не стирається
+# x-#створення нового файлу але якщо вже існує буде помилка
+
+if not os.path.exists('text.txt'):
+    with open('text.txt', 'w', encoding = 'utf-8') as file:
+        file.write('Python - популярна мова програмування. \n')
+        file.write('Python  використовується для роботи з даними. \n')
+        file.write('Файли дозволяють зберігати інформацію. \n')
+        file.write('Python вимагає практики. \n')
+        file.write('Сьогодні ми працюємо з текстовими файлами. \n')
+if not os.path.exists('numbers.txt'):
+    with open('numbers.txt', 'w', encoding = 'utf-8') as file:
+        file.write('12\n8\n28\n4\n16\n')
+if not os.path.exists('student.txt'):
+    with open('student.txt', 'w', encoding = 'utf-8') as file:
+        file.write('Ivanenko Anna;91 \n')
+        file.write('Leshcheko Ivan;76 \n')
+        file.write('Komarova Sophie;97 \n')
+        file.write('Bongarenko Illya;84 \n')
+
+if not os.path.exists('grades.csv'):
+    with open('grades.csv', 'w', encoding='utf-8') as file:
+        file.write(' Anna; Python;11 \n')
+        file.write(' Anna; Math;10 \n')
+        file.write(' Ivan;Python;6 \n')
+        file.write(' Ivan; Math;5 \n')
+        file.write(' Sophie;Python;11 \n')
+        file.write(' Sophie; Math;12 \n')
+        file.write(' Illya;Python;9 \n')
+        file.write(' Illya; Math;8 \n')
+
+with open('text.txt', 'r', encoding='utf-8') as file:
+    text = file.read()
+print(text)
+# with - #автоматично закриває файл після кінця роботи
+#utf-8 - #кодування кирилецею
+with open('log.txt', 'w', encoding='utf-8') as file:
+    file.write("Перший запуск\n")
+with open('log.txt', 'w', encoding='utf-8') as file:
+    file.write("Другий зауск,перший видалено")
+with open('log.txt', 'a', encoding='utf-8') as file:
+    file.write("Новий запис,додаємо в кінець\n")
+
+with open('log.txt', 'r', encoding='utf-8') as file:
+    print(file.read())
+
+#способи читання файлів
+with open('text.txt', 'r', encoding='utf-8') as file:
+    text = file.read()
+print(f'read-> {type(text)}, count -> {len(text)}')
+with open('text.txt', 'r', encoding='utf-8') as file:
+    line1 = file.readline()#наступний рядок
+    line2 = file.readline()#створються список які ще до того не були проситані
+    other_lines = file.readlines()
+print(line1)
+print(line2)
+print(other_lines)
+
+with open('text.txt', 'r', encoding='utf-8') as file:
+    lines = file.readlines()
+print(other_lines)
+print(other_lines[0] if lines else'файл порожній')
+
+#перебіг файлів
+
+with open('text.txt', 'r', encoding='utf-8') as file:
+    for number, line in enumerate(file, start=1):
+        clean_line = line.strip()
+        print(f'number -> {number}, line-> {clean_line}')
+
+#розпакування
+
+line = 'Ivanenko Anna;91\n'
+clean_line = line.strip()
+name, score = line.split(';')
+print(f'name-> {name}, score-> {score}')
+
+numbers = []
+with open('numbers.txt', 'r', encoding='utf-8') as file:
+    for line in file:
+        numbers.append(int(line.strip()))
+print(f'numbers-> {numbers}')
+
+student = []
+with open('student.txt', 'r', encoding='utf-8') as file:
+    for line in file:
+        name, score = line.split(';')
+        student.append([name, int(score)])
+print(student)
+
+
+#CSV
+grades = []
+with open('grades.csv', 'r', encoding='utf-8') as file:
+    for line in file:
+        name, subject, score = line.strip().split(';')
+        grades.append([name, subject, int(score)])
+
+
+
