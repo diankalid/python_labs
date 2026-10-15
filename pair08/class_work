@@ -1,0 +1,127 @@
+# if 5 > 2: #синтексична
+#     print('yes')
+# n = int('hello')
+
+# try:
+#     age = int(input('Enter your age: '))
+#     print(age)
+# except ValueError:
+#     print('Please enter a number')
+# try:
+#     a = float(input('a = '))
+#     b = float(input('b = '))
+#     result = a / b
+#     print(result)
+# except ValueError:
+#     print('Please enter a number')
+# except ZeroDivisionError:
+#     print('на нуль ділити не можна')
+
+# try:
+#     number = int(input("Enter a numbr: "))
+# except ValueError:
+#     print("Please enter a number")
+# else:
+#     print('квадрат від числа',number ** 2)
+
+# try:
+#     number = int(input("Enter a number: "))
+#     print(100 / number)
+# except ValueError:
+#     print("Please enter a number")
+# except ZeroDivisionError:
+#     print("Please enter not 0 ")
+# finally:
+#     print("Goodbye")
+
+# while True:
+#     try:
+#         gradee = int(input("Enter your grade 1..12: "))
+#         if gradee < 1 or gradee > 12:
+#             raise ValueError("Grade must be between 1 and 12")
+#         print(f"Your grade is {gradee}")
+#     except ValueError as error:
+#         print(f"Error: {error}")
+#         break
+#     except ValueError as error:
+#         print(f"Error: {error}")
+
+# def int_input(message):
+#     while True:
+#         try:
+#             return int(input(message))
+#         except ValueError:
+#             print("Please enter an integer")
+# count = int_input("Please enter a number")
+# print(f'кількість: {count}')
+
+# def input_grade():
+#     while True:
+#         try:
+#             grade = int(input("Enter your grade 1..2: "))
+#             if grade < 1 and grade > 12:
+#                 raise ValueError("Grade must be between 1 and 12")
+#             return grade
+#         except ValueError as error:
+#             print(error)
+# grade = input_grade()
+# print('прийнято',grade)
+
+
+# student=['Anna','Ivan', 'Sophie']
+# try:
+#     index=int(input("enter a number"))
+#     print(student[index])
+# except ValueError:
+#     print("enter a valid number")
+#
+# except IndexError:
+#     print("немвє такого індексу")
+
+# prices = {'apple': 100, 'banana':250, 'orange':300}
+# product = input('Enter product name: ')
+# # try:
+# #    print(f'ціна: {prices[product]}')
+# # except KeyError:
+# #     print('Нема товару')
+# price = prices.get(product, 'немає у наявності')
+# print(price)
+
+# try:
+#     with open(data.txt, 'r', encoding='utf-8') as file:
+#         data = file.read()
+#         print(data)
+# except FileNotFoundError:
+#     print('file not exict')
+
+# line = "Anna;60"
+# parts = line.strip().split(";")
+# if len(parts) != 2:
+#     print("error")
+# else:
+#     name = parts[0]
+#     grade = parts[1]
+#
+#     try:
+#         score = int(grade)
+#         if score < 0 or score > 100:
+#             raise ValueError("score must be between 0 and 100")
+#     except ValueError as error:
+#         print("error")
+#     else:
+#         print(f"Запис правильний {name} {score}")
+
+# lines = ['Anna;90','Ivan;vello','Matvey;90']
+# for line_number, line in enumerate(lines,start=1):
+#     parts = line.strip().split(';')
+#     if line_number !=2:
+#         print(f'№{line_number}:пропущено\n{line}')
+#
+#     name = parts[0]
+#     grade = parts[1]
+#     try:
+#         grade = int(grade)
+#     except ValueError:
+#         print(f'Рядок №{line_number},пропущено: не є числоиїм')
+#         continue
+#     print('Правильний запис:', name,grade)
