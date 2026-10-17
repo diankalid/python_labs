@@ -1,0 +1,110 @@
+#1
+# try:
+#     a = float(input('ВВедіть перше число'))
+#     b = float(input('ВВедіть друге число'))
+# except ValueError:
+#     print('помилка,введіть число')
+# else:
+#     oper = input('Операція:').strip()
+#
+#
+#     if oper == '+':
+#         result = a + b
+#         print(f'Результат: {result}')
+#     elif oper == '-':
+#         result = a - b
+#         print(f'Результат: {result}')
+#     elif oper == '*':
+#         result = a * b
+#         print(f'Результат: {result}')
+#     elif oper == '/':
+#         try:
+#            result = a / b
+#            print(f'Результат: {result}')
+#         except ZeroDivisionError:
+#             print('неможливо виконати ділення на нуль')
+#     else:
+#         try:
+#             raise ValueError
+#         except ValueError:
+#             print('невіома операція')
+#2
+# def input_grade():
+#     while True:
+#         try:
+#             grade = int(input('Оцінка'))
+#         except ValueError:
+#             print('Помилка: потрібно ціле число ')
+#             continue
+#         try:
+#             if grade < 1 or grade > 12:
+#                 raise ValueError('Помилка: число має бути від 1 до 12')
+#
+#         except ValueError as error:
+#             print(error)
+#             continue
+#         return grade
+# print(f'Прийнято: {input_grade()}')
+#3
+from operator import index
+
+# students = ['Lavchenko', 'Shvchenko','Boyko','Katerinechko']
+# grades = {'Математика': 11, 'Фізика': 7,'біологолія': 10,'інформатика':9 }
+#
+# ch = int(input('1-учень,2- предмет:'))
+# if ch == 1:
+#     try:
+#         index = int(input('Індекс:'))
+#         print(students[index])
+#     except IndexError:
+#         print('Помилка: учня з таким індекссом немає')
+# elif ch == 2:
+#         subject = input('Введіть назву предмету:')
+#         try:
+#             print('оцінки', grades[subject])
+#         except KeyError:
+#             print('Помилка: немає такого предмету')
+# else:
+#         print('Помилка:невідомий пункт')
+#4
+# def p_line(line):
+#     if ";" not  in line:
+#         raise ValueError('немає роздільника ;')
+#     parts = line.split(";")
+#     if len(parts) != 2:
+#         raise ValueError('неправильна кількість полів')
+#     name, sc_str = parts[0].strip(), parts[1].strip()
+#     if not [name]:
+#         raise ValueError("немає прізвища або ім'я")
+#     try:
+#         score = int(sc_str)
+#     except ValueError:
+#         raise ValueError('не є цілим числом')
+#     if not 0 <= score <= 100:
+#         raise ValueError('бал знаходитьсч поза діапазоном 0...100')
+#     return name, score
+# def main():
+#     try:
+#         with open('students.txt',encoding='utf-8') as file:
+#             lines = file.readlines()
+#     except FileNotFoundError:
+#         print('файл: students.txt не існує')
+#         return
+#     v = []
+#     skip = 0
+#     for number, line in enumerate(lines, start = 1):
+#         try:
+#             v.append(p_line(line))
+#
+#         except ValueError as error:
+#             skip += 1
+#             print(f'рядок {number} пропущено {error}')
+#         with open('report.txt','w',encoding='utf-8') as fil:
+#             for name, score in v:
+#                 fil.write(f'{name};{score}\n')
+#
+#     print(f'Правильних записів:{len(v)}')
+#     print(f'пропущено:{skip}')
+#     print('створено report.txt')
+# if __name__ == '__main__':
+#     main()
