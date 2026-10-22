@@ -1,1 +1,116 @@
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+#     def area(self):
+#         return self.width * self.height
+#     def perimeter(self):
+#         return self.width * 2 + self.height * 2
+#     def info(self):
+#         print(f'{self.width}* {self.height}: площа = {self.area()},периметер = {self.perimeter()}')
+# r1 = Rectangle(5, 3)
+# r2 = Rectangle(10, 4)
+# r1.info()
+# r2.info()
+# #2
+# class Students:
+#     def __init__(self, name):
+#         self.name = name
+#         self.grades = []
+#     def add_grade(self, grade):
+#         if 1 <= grade <= 12:
+#             self.grades.append(grade)
+#         else:
+#             print(f"{grade} не додається")
+#     def average_grade(self):
+#         if len(self.grades) == 0:
+#             return 0
+#         return round(sum(self.grades) / len(self.grades),2)
+#     def __str__(self):
+#         return (f'{self.name}: {self.grades}, середній = {self.average_grade()}')
+#
+#
+#
+# student = Students('Diana')
+# student.add_grade(10)
+# student.add_grade(12)
+# student.add_grade(15)
+# student.add_grade(9)
+
+# print(student)
+#3
+# s1 = Students('Anna')
+# s1.add_grade(10)
+# s1.add_grade(12)
+# s1.add_grade(9)
+#
+# s2 = Students('Ivan')
+# s2.add_grade(10)
+# s2.add_grade(9)
+# s2.add_grade(10)
+#
+# s3 = Students('Olhan')
+# s3.add_grade(10)
+# s3.add_grade(12)
+# s3.add_grade(11)
+#
+# s4 = Students('diana')
+#
+# s4.add_grade(11)
+# s4.add_grade(9)
+# s4.add_grade(8)
+#
+# s5 = Students('Lia')
+# s5.add_grade(10)
+# s5.add_grade(12)
+# s5.add_grade(12)
+#
+# students = [s1, s2, s3, s4, s5]
+# for student in students:
+#     print(student)
+# best_average = max([student.average_grade() for student in students])
+#
+# for student in students:
+#     if student.average_grade() == best_average:
+#         print(f'Найкращий результат: {student.name} - {student.average_grade()}')
+#4
+# class BankAccount:
+#     def __init__(self, owner, balance):
+#         self.owner = owner
+#         self.balance = balance
+# 
+#     def deposite(self, amount):
+#         if amount > 0:
+#             self.balance += amount
+#         else:
+#             print('Сума повинна бути більща за 0')
+# 
+#     def withdraw(self, amount):
+#         if amount <= 0:
+#             print('Помилка:cума зняття більша за 0')
+# 
+#         elif amount > self.balance:
+#             print('Помилка:недостатньо коштів')
+#         else:
+#             self.balance -= amount
+# 
+#     def info(self):
+#         print(f"{self.owner}:баланс{self.balance}")
+# 
+# 
+# bac1 = BankAccount('Ivan', 1000)
+# bac2 = BankAccount('diana', 700)
+# bac1.deposite(500)
+# bac1.withdraw(300)
+# bac1.withdraw(2000)
+# bac1.withdraw(-800)
+# 
+# bac1.withdraw(200)
+# bac1.deposite(100)
+# 
+# bac1.info()
+# 
+# bac2.info()
+
+
 
