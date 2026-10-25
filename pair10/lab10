@@ -82,4 +82,94 @@
 # course.remove_student("Olena Kalrtenko")
 # course.show_students()
 #4
+# class Student:
+#     def __init__(self, name,grade):
+#         self.name = name
+#         self.grade = []
+#     def add_grade(self, grade):
+#         if grade <= 12 or grade >= 1:
+#             self.grade.append(grade)
+#             return True
+#         else:
+#             return False
+#     def average_grade(self):
+#         if len(self.grade) == 0:
+#             return 0
+#         else:
+#             return sum(self.grade)/len(self.grade)
+#     def __str__(self):
+#         return (f'{self.name} - {self.grade}')
+# class Course:
+#     def __init__(self, title, teacher):
+#         self.title = title
+#         self.teacher = teacher
+#         self.students = []
+# 
+#     def add_student(self, student):
+#         for st in self.students:
+#             if st.name.lower() == student.name.lower():
+#                 return (f'студент {st.name} вже є на курсі')
+#         self.students.append(student)
+#     def remove_student(self, name):
+#         for student in self.students:
+#             if student.name.lower() == name.lower():
+#                 self.students.remove(student)
+#                 return True
+#             print('учня не знайдено')
+#     def find_student(self, name):
+#         for student in self.students:
+#             if student.name.lower() == name.lower():
+#                 return (student)
+#         return None
+#     def add_grade_to_student(self,name, grade):
+#         student = self.find_student(name)
+#         if student is None:
+#             return ('Учня не знайдено')
+#     def show_rating(self):
+#         if not self.students:
+#             return ('Немає учнів')
+#         rat = sorted(self.students, key=lambda s: s.average(),reverse = True())
+#         for li, student in enumerate(self.students, 1):
+#                  print(li ,student.name)
+# while True:
+#     print('1 - показати курс')
+#     print('2 - додати студента')
+#     print('3 - видалити студента')
+#     print('4 -знайти студента ')
+#     print('5 - виставити оцінку ')
+#     print('6 - показати рейтинг ')
+#     print('7 - зберегти дані')
+#     print('0 - вихід')
+#     choise = int(input('Введіть один із пунктів'))
+#     course = Course()
+#     if choise == 1:
+#         course.show_course()
+#     elif choise == 2:
+#         name = input('Введіть ПІБ: ').lower()
+#         course.add_student(name)
+#     elif choise == 3:
+# 
+#         name = input('Введіть ПІБ: ').lower()
+#         course.remove_student(name)
+#     elif choise == 4:
+#         name = input('Введіть ПІБ: ').lower()
+#         student = course.find_student(name)
+#         print(f'{student} - оцінки:{student.grade}')
+#     elif choise == 5:
+#         name = input('Введіть ПІБ: ').lower()
+#         try:
+#             grade = int(input('Оцінка від 1 до 12'))
+#             course.add_grade_to_student(name,grade)
+#         except ValueError:
+#             print('Введіть ціле число')
+#     elif choise == 6:
+#         course.show_course()
+#     elif choise == 7:
+#         course.save_date()
+#     elif choise == 0:
+#         print('Завершення')
+#         break
+#     else:
+#         print('не має такого пункту')
+
 
