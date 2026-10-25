@@ -1,13 +1,13 @@
 #1
-class Person:
-    def __init__(self, name ):
-        self.name = name
+# class Person:
+#     def __init__(self, name ):
+#         self.name = name
     # def into(self):
-    #     return (f"Ім'я:{self.name}")
-class Student(Person):
-    def __init__(self, name, group):
-        super().__init__(name)
-        self.group = group
+#     #     return (f"Ім'я:{self.name}")
+# class Student(Person):
+#     def __init__(self, name, group):
+#         super().__init__(name)
+#         self.group = group
     # def into(self):
     #     return(f'Учень:{self.name},група:{self.group}')
 # student1 = Student("Anna Ivanenko","IT-10")
@@ -15,10 +15,10 @@ class Student(Person):
 # print(student1.into())
 # print(student2.into())
 #2
-class Teacher(Person):
-    def __init__(self, name, subject ):
-        super().__init__(name)
-        self.subject = subject
+# class Teacher(Person):
+#     def __init__(self, name, subject ):
+#         super().__init__(name)
+#         self.subject = subject
     # def into(self):
     #     return (f'Викладач:{self.name},предмет: {self.subject}')
 
@@ -30,45 +30,56 @@ class Teacher(Person):
 # for person in list:
 #     print(person.into())
 #3
-class Course:
-    def __init__(self, title, teacher,students):
-        self.title = title
-        self.teacher = teacher
-        self.student = []
-    def add_student(self, students):
-        for st in self.students:
-            if st.name.lower() == students.name.lower():
-                return (f'студент {st.name} вже є на курсі')
-        self.students.append(st)
-
-
-
-    def remove_student(self, name):
-        for student in self.students():
-            if student.name.lower() == name.lower():
-                self.students.remove(student)
-                return True
-        print('учня не знайдено')
-    def show_students(self):
-        print (f'Курс: { self.title}')
-        print(f'Викладач: { self.teacher}')
-        print(f'Студенти: { self.student}')
+# class Teacher(Person):
+#     def __init__(self, name, ):
+#         super().__init__(name)
+# class Student(Person):
+#     def __init__(self, name):
+#         super().__init__(name)
+# 
+# class Course:
+#     def __init__(self, title, teacher):
+#         self.title = title
+#         self.teacher = teacher
+#         self.students = []
+#     def add_student(self, student):
+#         for st in self.students:
+#             if st.name.lower() == student.name.lower():
+#                 return (f'студент {st.name} вже є на курсі')
+#         self.students.append(student)
+# 
+# 
+# 
+#     def remove_student(self, name):
+#         for student in self.students:
+#             if student.name.lower() == name.lower():
+#                 self.students.remove(student)
+#                 return True
+#         print('учня не знайдено')
+#     def show_students(self):
+#         print (f'Курс: { self.title}')
+#         print(f'Викладач: { self.teacher.name}')
+#         print(f'Студенти:')
+#         for li, student  in enumerate(self.students, 1):
+#             print(li ,student.name)
 # teacher = Teacher('Ivan Komarov')
 # course  = Course('Python',teacher)
-st1 = Student('Amlia Drunonko')
-st2 = Student('Olena Kalrtenko')
-st3 = Student('Anna Ivanenko')
-st3 = Student('Vlad Kravchenko')
-st4 = Student('Ostap Zexonm')
+# st1 = Student('Amlia Drunonko')
+# st2 = Student('Olena Kalrtenko')
+# st3 = Student('Anna Ivanenko')
+# st3 = Student('Vlad Kravchenko')
+# st4 = Student('Ostap Zexonm')
+# 
+# course.add_student(st1)
+# 
+# course.add_student(st2)
+# 
+# course.add_student(st3)
+# 
+# course.add_student(st4)
+# 
+# 
+# course.remove_student("Olena Kalrtenko")
+# course.show_students()
+#4
 
-course.add_student(st1)
-
-course.add_student(st2)
-
-course.add_student(st3)
-
-course.add_student(st4)
-
-
-course.remove_student("Masha Jalina")
-print(course.show_students())
